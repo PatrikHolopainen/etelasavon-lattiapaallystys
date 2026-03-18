@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Etelä-Savon lattiapäällystys Oy – Ammattitaitoinen lattia-asennus Savossa</title>
-  <meta name="description" content="Etelä-Savon lattiapäällystys Oy on vuonna 2011 perustettu lattiapäällystysyritys Kangasniemeltä. Muovimatot, parketti, laminaatti, epoksilattiat ja hionta. Palvelemme Savon ja Keski-Suomen alueella.">
+  <title>ETELÄ-SAVON LATTIAPÄÄLLYSTYS OY – Ammattitaitoinen lattia-asennus Savossa</title>
+  <meta name="description" content="ETELÄ-SAVON LATTIAPÄÄLLYSTYS OY on vuonna 2011 perustettu lattiapäällystysyritys Kangasniemeltä. Muovimatot, parketti, laminaatti, epoksilattiat ja hionta. Palvelemme Savon ja Keski-Suomen alueella.">
   <meta name="keywords" content="lattia-asennus, muovimatto, parketti, laminaatti, epoksilattia, lattiatyöt, Kangasniemi, Mikkeli, Savo, Keski-Suomi">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,14 +58,16 @@
     }
 
     .nav-brand {
-      font-family: 'Playfair Display', serif;
-      color: var(--white);
-      font-size: 17px;
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      letter-spacing: 0.01em;
     }
 
-    .nav-brand span { color: var(--amber-light); }
+    .nav-brand img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
 
     .nav-links { display: flex; gap: 32px; list-style: none; }
 
@@ -154,12 +156,6 @@
     .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.5); }
     .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
 
-    /* BEFORE/AFTER SHOWSTOPPER */
-    .showstopper {
-      background: var(--navy);
-      padding: 64px 24px;
-    }
-
     .section-header {
       text-align: center;
       margin-bottom: 40px;
@@ -184,106 +180,6 @@
       font-size: 15px;
       color: var(--text-muted);
       margin-top: 8px;
-    }
-
-    .showstopper .section-title { color: var(--white); }
-    .showstopper .section-sub { color: rgba(255,255,255,0.6); }
-
-    .slider-wrap {
-      width: min(100%, 720px);
-      max-width: 720px;
-      margin: 0 auto;
-      position: relative;
-      user-select: none;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.45);
-    }
-
-    .slider-wrap img {
-      display: block;
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .slider-before-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      object-position: center;
-      filter: grayscale(80%) brightness(0.55) sepia(20%);
-      clip-path: inset(0 50% 0 0);
-    }
-
-    .slider-after {
-      display: block;
-      width: 100%;
-    }
-
-    .slider-divider {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: var(--white);
-      left: 50%;
-      transform: translateX(-50%);
-      pointer-events: none;
-    }
-
-    .slider-handle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 3px solid var(--amber);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: ew-resize;
-      pointer-events: all;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-      transition: box-shadow 0.15s;
-    }
-
-    .slider-handle:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
-    .slider-handle svg { color: var(--amber); }
-
-    .slider-labels {
-      position: absolute;
-      top: 16px;
-      left: 0; right: 0;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 20px;
-      pointer-events: none;
-    }
-
-    .slider-tag {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 20px;
-    }
-
-    .slider-tag.before { background: rgba(0,0,0,0.6); color: rgba(255,255,255,0.8); }
-    .slider-tag.after { background: var(--amber); color: var(--white); }
-
-    .slider-note {
-      text-align: center;
-      margin-top: 16px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.45);
     }
 
     /* ABOUT */
@@ -643,17 +539,6 @@
       .trust { padding-left: 18px; padding-right: 18px; }
       .services-grid { grid-template-columns: minmax(0, 1fr); }
       .gallery-grid { grid-template-columns: minmax(0, 1fr); }
-      .slider-labels { padding: 0 12px; }
-      .slider-tag {
-        font-size: 11px;
-        letter-spacing: 0.06em;
-        padding: 4px 10px;
-      }
-      .slider-note {
-        max-width: 24ch;
-        margin-left: auto;
-        margin-right: auto;
-      }
       .ref-card { padding: 20px 16px; }
     }
 
@@ -672,8 +557,6 @@
         font-size: 11px;
         letter-spacing: 0.06em;
       }
-      .slider-wrap img,
-      .slider-before-img { height: 320px; }
       .ref-card { padding: 18px 14px; }
     }
   </style>
@@ -683,7 +566,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-brand">Etelä-Savon <span>lattiapäällystys</span> Oy</a>
+    <a href="#" class="nav-brand"><img src="/logo.jpg" alt="ETELÄ-SAVON LATTIAPÄÄLLYSTYS OY"></a>
     <ul class="nav-links">
       <li><a href="#palvelut">Palvelut</a></li>
       <li><a href="#referenssit">Referenssit</a></li>
@@ -695,9 +578,9 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-eyebrow">Kangasniemi · Savo ja Keski-Suomi</p>
-    <h1>Ammattitaitoinen lattia-asennus<br>yrityksille ja yksityisille</h1>
-    <p class="hero-sub">Yli 15 vuoden kokemuksella toteutamme muovimatot, laminaatit, parketit ja pinnoitelattiat laadulla joka kestää.</p>
+    <p class="hero-eyebrow">ETELÄ-SAVON LATTIAPÄÄLLYSTYS OY</p>
+    <h1>Puulattioiden ja parkettilattioiden<br>hionta ja lakkaus</h1>
+    <p class="hero-sub">Yli 25 vuoden kokemuksella toteutamme muovimatot, laminaatit, parketit ja pinnoitelattiat laadulla joka kestää.</p>
     <div class="hero-ctas">
       <a href="#yhteystiedot" class="btn btn-primary">
         <i data-lucide="phone" style="width:16px;height:16px"></i>
@@ -711,35 +594,6 @@
   </div>
 </section>
 
-<!-- BEFORE/AFTER SHOWSTOPPER -->
-<section class="showstopper" id="showstopper">
-  <div class="section-header reveal">
-    <p class="section-label">Ennen &amp; jälkeen</p>
-    <h2 class="section-title">Näe muutos omin silmin</h2>
-    <p class="section-sub">Vedä liukua ja katso, miten ammattiasennus muuttaa tilan</p>
-  </div>
-
-  <div class="slider-wrap reveal" id="beforeAfterSlider">
-    <!-- After image (base) -->
-    <img class="slider-after" src="https://www.etelasavonlattiapaallystys.fi/linoleum.JPG" alt="Uusi joustovinyylilaattalattia asennettuna">
-
-    <!-- Before image, clipped via clip-path -->
-    <img class="slider-before-img" id="beforeImg" src="https://www.etelasavonlattiapaallystys.fi/linoleum.JPG" alt="Lattia ennen saneerausta">
-
-    <!-- Labels -->
-    <div class="slider-labels">
-      <span class="slider-tag before">Ennen</span>
-      <span class="slider-tag after">Jälkeen</span>
-    </div>
-
-    <!-- Divider + handle -->
-    <div class="slider-divider" id="sliderDivider"></div>
-    <div class="slider-handle" id="sliderHandle">
-      <i data-lucide="move-horizontal" style="width:20px;height:20px"></i>
-    </div>
-  </div>
-  <p class="slider-note reveal">Joustovinyylilaattalattia – vedä liukua vasemmalle tai oikealle</p>
-</section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
@@ -752,11 +606,11 @@
         <p class="section-label reveal">Yritys</p>
         <h2 class="section-title reveal">Luotettava kumppani lattiatöihin</h2>
       </div>
-      <p class="reveal reveal-delay-1" style="margin-top:16px">Etelä-Savon lattiapäällystys Oy on vuonna 2011 perustettu kangasniemeläinen yritys. Palvelemme yrityksiä, taloyhtiöitä ja yksityishenkilöitä Savon ja Keski-Suomen alueella.</p>
-      <p class="reveal reveal-delay-2">Yrittäjä Timo Pylvänäinen vastaa henkilökohtaisesti jokaisen työn laadusta yli 15 vuoden työkokemuksella. AAA-luokiteltu luottoluokitus takaa taloudellisen vakauden ja luotettavuuden yhteistyökumppanina.</p>
+      <p class="reveal reveal-delay-1" style="margin-top:16px">ETELÄ-SAVON LATTIAPÄÄLLYSTYS OY on vuonna 2011 perustettu kangasniemeläinen yritys. Palvelemme yrityksiä, taloyhtiöitä ja yksityishenkilöitä Savon ja Keski-Suomen alueella.</p>
+      <p class="reveal reveal-delay-2">Yrittäjä Timo Pylvänäinen vastaa henkilökohtaisesti jokaisen työn laadusta yli 25 vuoden työkokemuksella. AAA-luokiteltu luottoluokitus takaa taloudellisen vakauden ja luotettavuuden yhteistyökumppanina.</p>
       <div class="stats reveal reveal-delay-3">
         <div class="stat-item">
-          <div class="stat-num">15+</div>
+          <div class="stat-num">25+</div>
           <div class="stat-label">Vuotta kokemusta</div>
         </div>
         <div class="stat-item">
@@ -933,7 +787,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <strong>© 2026 Etelä-Savon lattiapäällystys Oy</strong> · Mannilantie 180, 51200 Kangasniemi · Y-tunnus 2450575-9
+  <strong>© 2026 ETELÄ-SAVON LATTIAPÄÄLLYSTYS OY</strong> · Mannilantie 180, 51200 Kangasniemi · Y-tunnus 2450575-9
 </footer>
 
 <script>
@@ -952,33 +806,6 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   reveals.forEach(el => observer.observe(el));
 
-  // Before/After Slider
-  const slider = document.getElementById('beforeAfterSlider');
-  const beforeImg = document.getElementById('beforeImg');
-  const handle = document.getElementById('sliderHandle');
-  const divider = document.getElementById('sliderDivider');
-  let dragging = false;
-
-  function setPosition(x) {
-    const rect = slider.getBoundingClientRect();
-    let pct = (x - rect.left) / rect.width;
-    pct = Math.max(0.05, Math.min(0.95, pct));
-    const pctPx = (pct * 100).toFixed(2) + '%';
-    const rightClip = ((1 - pct) * 100).toFixed(2) + '%';
-    beforeImg.style.clipPath = `inset(0 ${rightClip} 0 0)`;
-    divider.style.left = pctPx;
-    handle.style.left = pctPx;
-  }
-
-  handle.addEventListener('mousedown', e => { dragging = true; e.preventDefault(); });
-  window.addEventListener('mouseup', () => { dragging = false; });
-  window.addEventListener('mousemove', e => { if (dragging) setPosition(e.clientX); });
-
-  handle.addEventListener('touchstart', e => { dragging = true; }, { passive: true });
-  window.addEventListener('touchend', () => { dragging = false; });
-  window.addEventListener('touchmove', e => {
-    if (dragging) setPosition(e.touches[0].clientX);
-  }, { passive: true });
 </script>
 </body>
 </html>

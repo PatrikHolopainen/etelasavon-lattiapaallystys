@@ -154,12 +154,6 @@
     .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.5); }
     .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
 
-    /* BEFORE/AFTER SHOWSTOPPER */
-    .showstopper {
-      background: var(--navy);
-      padding: 64px 24px;
-    }
-
     .section-header {
       text-align: center;
       margin-bottom: 40px;
@@ -184,106 +178,6 @@
       font-size: 15px;
       color: var(--text-muted);
       margin-top: 8px;
-    }
-
-    .showstopper .section-title { color: var(--white); }
-    .showstopper .section-sub { color: rgba(255,255,255,0.6); }
-
-    .slider-wrap {
-      width: min(100%, 720px);
-      max-width: 720px;
-      margin: 0 auto;
-      position: relative;
-      user-select: none;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.45);
-    }
-
-    .slider-wrap img {
-      display: block;
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .slider-before-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      object-position: center;
-      filter: grayscale(80%) brightness(0.55) sepia(20%);
-      clip-path: inset(0 50% 0 0);
-    }
-
-    .slider-after {
-      display: block;
-      width: 100%;
-    }
-
-    .slider-divider {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: var(--white);
-      left: 50%;
-      transform: translateX(-50%);
-      pointer-events: none;
-    }
-
-    .slider-handle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 3px solid var(--amber);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: ew-resize;
-      pointer-events: all;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-      transition: box-shadow 0.15s;
-    }
-
-    .slider-handle:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
-    .slider-handle svg { color: var(--amber); }
-
-    .slider-labels {
-      position: absolute;
-      top: 16px;
-      left: 0; right: 0;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 20px;
-      pointer-events: none;
-    }
-
-    .slider-tag {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 20px;
-    }
-
-    .slider-tag.before { background: rgba(0,0,0,0.6); color: rgba(255,255,255,0.8); }
-    .slider-tag.after { background: var(--amber); color: var(--white); }
-
-    .slider-note {
-      text-align: center;
-      margin-top: 16px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.45);
     }
 
     /* ABOUT */
@@ -643,17 +537,6 @@
       .trust { padding-left: 18px; padding-right: 18px; }
       .services-grid { grid-template-columns: minmax(0, 1fr); }
       .gallery-grid { grid-template-columns: minmax(0, 1fr); }
-      .slider-labels { padding: 0 12px; }
-      .slider-tag {
-        font-size: 11px;
-        letter-spacing: 0.06em;
-        padding: 4px 10px;
-      }
-      .slider-note {
-        max-width: 24ch;
-        margin-left: auto;
-        margin-right: auto;
-      }
       .ref-card { padding: 20px 16px; }
     }
 
@@ -672,8 +555,6 @@
         font-size: 11px;
         letter-spacing: 0.06em;
       }
-      .slider-wrap img,
-      .slider-before-img { height: 320px; }
       .ref-card { padding: 18px 14px; }
     }
   </style>
@@ -711,35 +592,6 @@
   </div>
 </section>
 
-<!-- BEFORE/AFTER SHOWSTOPPER -->
-<section class="showstopper" id="showstopper">
-  <div class="section-header reveal">
-    <p class="section-label">Ennen &amp; jälkeen</p>
-    <h2 class="section-title">Näe muutos omin silmin</h2>
-    <p class="section-sub">Vedä liukua ja katso, miten ammattiasennus muuttaa tilan</p>
-  </div>
-
-  <div class="slider-wrap reveal" id="beforeAfterSlider">
-    <!-- After image (base) -->
-    <img class="slider-after" src="https://www.etelasavonlattiapaallystys.fi/linoleum.JPG" alt="Uusi joustovinyylilaattalattia asennettuna">
-
-    <!-- Before image, clipped via clip-path -->
-    <img class="slider-before-img" id="beforeImg" src="https://www.etelasavonlattiapaallystys.fi/linoleum.JPG" alt="Lattia ennen saneerausta">
-
-    <!-- Labels -->
-    <div class="slider-labels">
-      <span class="slider-tag before">Ennen</span>
-      <span class="slider-tag after">Jälkeen</span>
-    </div>
-
-    <!-- Divider + handle -->
-    <div class="slider-divider" id="sliderDivider"></div>
-    <div class="slider-handle" id="sliderHandle">
-      <i data-lucide="move-horizontal" style="width:20px;height:20px"></i>
-    </div>
-  </div>
-  <p class="slider-note reveal">Joustovinyylilaattalattia – vedä liukua vasemmalle tai oikealle</p>
-</section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
@@ -952,33 +804,6 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   reveals.forEach(el => observer.observe(el));
 
-  // Before/After Slider
-  const slider = document.getElementById('beforeAfterSlider');
-  const beforeImg = document.getElementById('beforeImg');
-  const handle = document.getElementById('sliderHandle');
-  const divider = document.getElementById('sliderDivider');
-  let dragging = false;
-
-  function setPosition(x) {
-    const rect = slider.getBoundingClientRect();
-    let pct = (x - rect.left) / rect.width;
-    pct = Math.max(0.05, Math.min(0.95, pct));
-    const pctPx = (pct * 100).toFixed(2) + '%';
-    const rightClip = ((1 - pct) * 100).toFixed(2) + '%';
-    beforeImg.style.clipPath = `inset(0 ${rightClip} 0 0)`;
-    divider.style.left = pctPx;
-    handle.style.left = pctPx;
-  }
-
-  handle.addEventListener('mousedown', e => { dragging = true; e.preventDefault(); });
-  window.addEventListener('mouseup', () => { dragging = false; });
-  window.addEventListener('mousemove', e => { if (dragging) setPosition(e.clientX); });
-
-  handle.addEventListener('touchstart', e => { dragging = true; }, { passive: true });
-  window.addEventListener('touchend', () => { dragging = false; });
-  window.addEventListener('touchmove', e => {
-    if (dragging) setPosition(e.touches[0].clientX);
-  }, { passive: true });
 </script>
 </body>
 </html>
